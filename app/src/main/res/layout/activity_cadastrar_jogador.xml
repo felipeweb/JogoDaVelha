@@ -1,0 +1,46 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			  xmlns:tools="http://schemas.android.com/tools"
+			  android:layout_width="match_parent"
+			  android:layout_height="match_parent"
+			  tools:context=".MainActivity"
+			  android:orientation="vertical">
+
+	<TextView
+			android:text="@string/nome"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"/>
+
+	<EditText
+			android:id="@+id/cadastrarNome"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"/>
+
+
+	<TextView
+			android:text="@string/login"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"/>
+
+	<EditText
+			android:id="@+id/cadastrarLogin"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"/>
+
+	<TextView
+			android:text="@string/senha"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"/>
+
+	<EditText
+			android:id="@+id/cadastrarSenha"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:inputType="textPassword"/>
+
+	<Button
+			android:id="@+id/btnAdicionar"
+			android:text="@string/cadastrar"
+			android:layout_gravity="center"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"/>
+</LinearLayout>
