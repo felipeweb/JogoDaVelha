@@ -25,7 +25,7 @@ public class CadastarAlunoActivity extends Activity {
 				EditText inputLogin = (EditText) findViewById(R.id.cadastrarLogin);
 				EditText inputSenha = (EditText) findViewById(R.id.cadastrarSenha);
 				EditText inputNome = (EditText) findViewById(R.id.cadastrarNome);
-				Jogador jogador = new Jogador(inputNome.getText().toString(), inputLogin.getText().toString(), inputSenha.getText().toString(), 0);
+				Jogador jogador = new Jogador(inputNome.getText().toString(), inputLogin.getText().toString(), inputSenha.getText().toString(), 0, 0, 0);
 				Partida.adicionarJogador(jogador);
 				Intent intent = new Intent(CadastarAlunoActivity.this, MainActivity.class);
 				Bundle bundle = new Bundle();
