@@ -133,12 +133,30 @@ public class TabuleiroActivity extends Activity {
 			ganhou = verificaLinha(button, parar, buttons[linha]);
 		}
 		if (!ganhou) {
-			ganhou = verificaDaigonal(button, parar);
+			ganhou = verificaDiagonalPrinciapal(button, parar);
+		}
+		if (!ganhou) {
+			ganhou = verificaDiagonalSecundaria(button, parar);
 		}
 		return ganhou;
 	}
 
-	private boolean verificaDaigonal(Button button, boolean parar) {
+	private boolean verificaDiagonalSecundaria(Button button, boolean parar) {
+		for (int i = 0; i < 3; i++) {
+			for (int j = 0; j < 3; j++) {
+				int soma = i + j;
+				if (parar) {
+					break;
+				}
+				if (soma == 2 && !button.getText().equals(buttons[i][j].getText()) && button.getId() != buttons[i][j].getId()) {
+					parar = true;
+				}
+			}
+		}
+		return !parar;
+	}
+
+	private boolean verificaDiagonalPrinciapal(Button button, boolean parar) {
 		for (int i = 0; i < 3; i++) {
 			if (parar) {
 				break;
