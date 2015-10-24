@@ -146,7 +146,7 @@ public class TabuleiroActivity extends Activity {
 			for (int j = 0; j < 3; j++) {
 				int soma = i + j;
 				if (parar) {
-					break;
+					return !parar;
 				}
 				if (soma == 2 && !button.getText().equals(buttons[i][j].getText()) && button.getId() != buttons[i][j].getId()) {
 					parar = true;
@@ -159,7 +159,7 @@ public class TabuleiroActivity extends Activity {
 	private boolean verificaDiagonalPrinciapal(Button button, boolean parar) {
 		for (int i = 0; i < 3; i++) {
 			if (parar) {
-				break;
+				return !parar;
 			}
 			if (!button.getText().equals(buttons[i][i].getText()) && button.getId() != buttons[i][i].getId()) {
 				parar = true;
@@ -171,7 +171,7 @@ public class TabuleiroActivity extends Activity {
 	private boolean verificaColuna(Button button, boolean parar, int coluna) {
 		for (int i = 0; i < 3; i++) {
 			if (parar) {
-				break;
+				return !parar;
 			}
 			if (!button.getText().equals(buttons[i][coluna].getText()) && button.getId() != buttons[i][coluna].getId()) {
 				parar = true;
@@ -183,7 +183,7 @@ public class TabuleiroActivity extends Activity {
 	private boolean verificaLinha(Button button, boolean parar, Button[] buttons) {
 		for (int i = 0; i < 3; i++) {
 			if (parar) {
-				break;
+				return !parar;
 			}
 			if (!button.getText().equals(buttons[i].getText()) && button.getId() != buttons[i].getId()) {
 				parar = true;
