@@ -51,8 +51,8 @@ public class TabuleiroActivity extends Activity {
 							if (ganhou) {
 								Toast.makeText(TabuleiroActivity.this, "Você ganhou", Toast.LENGTH_SHORT).show();
 								int numeroDePartidas = jogador.getNumeroDePartidas();
-								int vitorias = jogador.getVitorias();
-								jogador.setVitorias(vitorias + 1);
+								int vitorias = jogador.getNumeroDeVitorias();
+								jogador.setNumeroDeVitorias(vitorias + 1);
 								jogador.setNumeroDePartidas(numeroDePartidas + 1);
 								TextView numeroPartidas = (TextView) findViewById(R.id.numeroPartidas);
 								numeroPartidas.setText(String.valueOf(jogador.getNumeroDePartidas()));
@@ -63,8 +63,8 @@ public class TabuleiroActivity extends Activity {
 								if (ganhouAndroid) {
 									Toast.makeText(TabuleiroActivity.this, "Android ganhou", Toast.LENGTH_SHORT).show();
 									int numeroDePartidas = jogador.getNumeroDePartidas();
-									int derrotas = jogador.getDerrotas();
-									jogador.setDerrotas(derrotas + 1);
+									int derrotas = jogador.getNumeroDeDerrotas();
+									jogador.setNumeroDeDerrotas(derrotas + 1);
 									jogador.setNumeroDePartidas(numeroDePartidas + 1);
 									TextView numeroPartidas = (TextView) findViewById(R.id.numeroPartidas);
 									numeroPartidas.setText(String.valueOf(jogador.getNumeroDePartidas()));

@@ -11,16 +11,16 @@ public class Jogador implements Serializable {
 	private String login;
 	private String senha;
 	private int numeroDePartidas = 0;
-	private int vitorias = 0;
-	private int derrotas = 0;
+	private int numeroDeVitorias = 0;
+	private int numeroDeDerrotas = 0;
 
 	public Jogador(String nome, String login, String senha, int numeroDePartidas, int vitorias, int derrotas) {
 		this.nome = nome;
 		this.login = login;
 		this.senha = senha;
 		this.numeroDePartidas = numeroDePartidas;
-		this.vitorias = vitorias;
-		this.derrotas = derrotas;
+		this.numeroDeVitorias = vitorias;
+		this.numeroDeDerrotas = derrotas;
 	}
 
 	public String getNome() {
@@ -55,19 +55,19 @@ public class Jogador implements Serializable {
 		this.numeroDePartidas = numeroDePartidas;
 	}
 
-	public int getVitorias() {
-		return vitorias;
+	public int getNumeroDeVitorias() {
+		return numeroDeVitorias;
 	}
 
-	public void setVitorias(int vitorias) {
-		this.vitorias = vitorias;
+	public void setNumeroDeVitorias(int numeroDeVitorias) {
+		this.numeroDeVitorias = numeroDeVitorias;
 	}
 
-	public int getDerrotas() {
-		return derrotas;
+	public int getNumeroDeDerrotas() {
+		return numeroDeDerrotas;
 	}
 
-	public void setDerrotas(int derrotas) {
-		this.derrotas = derrotas;
+	public void setNumeroDeDerrotas(int numeroDeDerrotas) {
+		this.numeroDeDerrotas = numeroDeDerrotas;
 	}
 }
